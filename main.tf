@@ -69,7 +69,7 @@ resource "aws_instance" "benchmark" {
                --network benchmark-net \
                -p 80:80 \
                -p 443:443 \
-               -e DOMAINS='juiceshop.${var.domain_root} -> http://juice-shop:3000, webgoat.${var.domain_root} -> http://webgoat:8080, webwolf.${var.domain_root} -> http://webgoat:9090, dvws-node.${var.domain_root} -> http://dvws-node:80, crapi.${var.domain_root} -> http://crapi-web:80' \
+               -e DOMAINS='juiceshop.${var.domain_root} -> http://juice-shop:3000, webgoat.${var.domain_root} -> http://webgoat:8080, webwolf.${var.domain_root} -> http://webgoat:9090, dvws-node.${var.domain_root} -> http://dvws-node:80, crapi.${var.domain_root} -> http://crapi-web:80, crapi-mail.${var.domain_root} -> http://mailhog:8025' \
                -e STAGE=production \
                steveltn/https-portal
               EOF
