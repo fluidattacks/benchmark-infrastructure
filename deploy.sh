@@ -7,7 +7,7 @@ terraform init
 echo "Applying initial configuration..."
 terraform apply -auto-approve
 # Step 3
-sleep_time=10
+sleep_time=20
 echo "Waiting for $sleep_time minutes before updating the security group..."
 
 while [ $sleep_time -gt 0 ]; do

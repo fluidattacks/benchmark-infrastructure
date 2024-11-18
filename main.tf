@@ -16,7 +16,7 @@ resource "aws_instance" "benchmark" {
   }
 
   # Security group allowing HTTP, HTTPS, and SSH
-  vpc_security_group_ids = [aws_security_group.allow_egress_ips.id]
+  vpc_security_group_ids = [aws_security_group.initial_access_sg.id]
 
   # User data script for instance initialization
   user_data = <<-EOF
